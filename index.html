@@ -842,29 +842,40 @@
             </div>
 
             <div class="contact-form scroll-reveal">
-                <form onsubmit="handleSubmit(event)">
+                <form action="https://formspree.io/f/xkopaeoe" method="POST">
                     <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Tu nombre" required>
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
                     </div>
+    
                     <div class="form-group">
-                        <label>Empresa</label>
-                        <input type="text" placeholder="Nombre de tu empresa">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="tu@email.com" required>
                     </div>
+    
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" placeholder="tu@email.com" required>
+                    <label>Empresa</label>
+                    <input type="text" name="empresa" placeholder="Nombre de tu empresa">
                     </div>
+    
                     <div class="form-group">
-                        <label>Tipo de Proyecto</label>
-                        <input type="text" placeholder="Ej: Migración a CCaaS, Integración CRM, etc.">
+                    <label>Tipo de Proyecto</label>
+                    <input type="text" name="proyecto" placeholder="Ej: Migración a CCaaS, Integración CRM...">
                     </div>
+    
                     <div class="form-group">
-                        <label>Mensaje</label>
-                        <textarea rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">
-                        Enviar Propuesta
+    
+                    <!-- Redirección después de enviar -->
+                    <input type="hidden" name="_next" value="https://thedarggous.github.io/gracias.html">
+    
+                    <!-- Anti-spam honeypot (oculto) -->
+                    <input type="text" name="_gotcha" style="display:none">
+    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer; padding: 1rem;">
+                    Enviar Propuesta
                     </button>
                 </form>
             </div>
